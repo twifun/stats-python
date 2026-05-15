@@ -1,0 +1,129 @@
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{xcolor}
+
+\usepackage[french]{babel}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{subfiles}
+%\selectlanguage{french}
+\usepackage{minitoc}
+
+
+\usepackage{background}
+\backgroundsetup{contents={}}
+
+\usepackage{graphicx}
+
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\usepackage{lastpage}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{nameref}
+\usepackage{imakeidx}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+% Code
+\usepackage{minted}
+% Chimie
+\usepackage[version=4]{mhchem}
+\newcommand{\topic}{PDF}
+\renewcommand{\author}{Author Name}
+\renewcommand{\date}{\today}
+\newcommand{\tpage}{
+	\setcounter{page}{1}
+	\backgroundsetup{
+		scale=1,
+		angle=0,
+		opacity=0.8,
+		contents={\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/fond.png}}
+	}
+	\begin{titlepage}
+		\clearpage
+		\thispagestyle{empty}
+		\BgThispage
+		\centering
+		\vspace*{\fill}
+		
+		\includegraphics[height=2cm]{img/LOGO}\\[0.5cm]
+		{\huge \textbf{\topic}}\\[1cm]
+		
+		{\large \textbf{\author}}\\[1cm]
+		
+		{\large \date}
+		
+		\vspace*{\fill}
+		
+		\includegraphics[height=2cm]{img/LOGO_UR}
+		%	\vspace*{\fill}
+		
+	\end{titlepage}
+	
+	\backgroundsetup{contents={}}
+	\newpage
+	\setcounter{page}{2}
+}
+
+\newcommand{\settitlepage}[3]{
+	\renewcommand{\topic}{#1}
+	\renewcommand{\author}{#2}
+	\renewcommand{\date}{#3}
+}
+
+\newcommand{\epage}{
+	\clearpage
+	\thispagestyle{empty}
+	\backgroundsetup{
+		scale=1,
+		angle=0,
+		opacity=0.8,
+		contents={\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/fond.png}}
+	}
+	\BgThispage
+	\setlength{\headsep}{0cm}
+	\begin{center}
+		\vspace*{\fill}
+		
+		
+		{\LARGE \textbf{\topic}}\\[1cm]
+		
+		{\large \textbf{\author}}\\[0.5cm]
+		\includegraphics[height=2cm]{img/LOGO}
+		\vspace*{\fill}
+	\end{center}
+}
+
+\newcommand{\setendpage}[2]{
+	\renewcommand{\topic}{#1}
+	\renewcommand{\author}{#2}
+}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+
+\fancyhead[L]{CPI 1}
+\fancyhead[R]{\includegraphics[width=2cm]{img/LOGO}}
+\fancyhead[C]{\topicshort}
+
+\fancyfoot[L]{\includegraphics[width=3cm]{img/LOGO_UR}}
+\fancyfoot[R]{\thepage/\pageref*{LastPage}}
+\fancyfoot[C]{\author}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+%\setlength{\headsep}{1cm}
+\pagestyle{fancy}
+\newcommand{\topicshort}{\topic}
