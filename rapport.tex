@@ -1,6 +1,6 @@
 \documentclass[11pt, a4paper]{article}
 
-\usepackage{./package}
+\usepackage{package}
 
 \usepackage{fontspec}
 \setmainfont{Montserrat}
@@ -8,7 +8,7 @@
 \usepackage{unicode-math}
 \setmathfont{Fira Math} 
 
-\settitlepage{TP de Statistiques Inférentielles 1
+\settitlepage{TP de Statistiques Inférentielles 1\\
 	Étude statistique et lois de probabilité avec Python}{Thibauld SAVIGNY\\Benjamin PAYET\\Amritesh SINEYEN}{22 mai 2026}
 	
 \renewcommand{\topicshort}{Statistique Inférentielles 1}
@@ -18,7 +18,25 @@
 	
 	\tpage
 	\renewcommand{\author}{Thibauld, Benjamin, Amritesh}
-	\tableofcontents
+	\tableofcontents\newpage
+	\section*{Objectif}
+	\addcontentsline{toc}{section}{Objectif}
+	\begin{itemize}[label=$\Diamond$]
+		\item identifier une population statistique
+		\item choisir un échantillon
+		\item définir une ou plusieurs variables aléatoires
+		\item collecter et analyser des données réelles 
+		\item utiliser Python pour effectuer les calculs statistiques 
+		\item modéliser une variable aléatoire par une loi de probabilité 
+		\item utiliser les principales commandes Python associées aux lois continues
+	\end{itemize}
+	\newpage
+	\part{Étude statistique d’un phénomène réel}
+	\subfile{part1}
+	\newpage
+	\part{Étude des lois continues avec Python}
+	\subfile{part2}
+	
 	\epage
 	
 \end{document}
